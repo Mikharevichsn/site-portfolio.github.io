@@ -41,7 +41,7 @@ body {
   font-family: 'Domine', serif;
   font-size: 20px;
   color: #fff;
-  padding: 58px 30px 15px 25px;
+  padding: 24px 30px 15px 25px;
 }
 
 .header .menu {
@@ -70,7 +70,7 @@ body {
 
 .header .slogan {
   margin-top: 210px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
 }
 
 .header .slogan h1 {
