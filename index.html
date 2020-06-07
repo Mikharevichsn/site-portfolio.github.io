@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Портфолио</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Domine:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" href="img/favicon.png">
+</head>
+<body>
+  <header class="header">
+    <div class="container flex-wrapper bg-white">
+      <div class="logo">
+        SerjoWeb
+      </div>
+      <nav class="menu">
+        <ul>
+          <li><a href="#about">Обо мне</a></li>
+          <li><a href="#portfolio">Портфолио</a></li>
+          <li><a href="#">Контакты</a></li>
+          <li class="VK"><a href="https://vk.com/mikharevichsn" target="_blank"><img src="img/vk.png" alt="Ссылка на меня в ВК"></a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container">
+      <div class="slogan">
+        <h1>
+          Выучусь в Буткемпе<br>
+          стану крутым<br>
+          ДжаваСкриптизёром!
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <div class="header-btn">
+        Красавчик, чё!
+      </div>
+    </div>
+    <div class="Keanu">
+      <img src="img/Keanu.jpg">
+    </div>
+  </header>
+  <main class="content">
+    <div class="snippets" id="about">
+      <div class="item">
+        <h4>Фигачу сайты с 2011 года</h4>
+        <span>В основном на CMS "1С-Битрикс"</span>
+      </div>
+      <div class="item">
+        <h4>Ща<br>еще JS подучу</h4>
+        <span>Буду такие вещи создавать - закачаешься!</span>
+      </div>
+      <div class="item">
+        <h4>А как выучу - всё будет!</h4>
+        <span>Успех! Женщины! Алкоголь! )))</span>
+      </div>
+    </div>
+    <div class="portfolio" id="portfolio">
+      <div class="project">
+        <div class="pic">
+          <img src="img/mac.jpg" alt="Супер Проект №1">
+        </div>
+        <div class="text">
+          <h3>Портфолио</h3>
+          <span>Все выполненные супер-проекты тут выложу!</span>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer class="footer">
+    <div class="social">
+      <a href="https://vk.com/mikharevichsn" target="_blank">
+        <img src="img/vk-footer.png" alt="Мой ВК">
+      </a>
+      <a href="https://instagram.com/serjo.biz" target="_blank">
+        <img src="img/Instagram.png" alt="Мой Инста">
+      </a>
+    </div>
+    <div class="copyright">&copy SerjoWeb | Пока делал - поржал знатно!<br>Надеюсь вы тоже посемялись! ))</div>
+  </footer>
+
+
+  <script>
+    let headerBtn = document.querySelector('.header-btn');
+    let divKeanu = document.querySelector('.Keanu');
+    headerBtn.onclick = function() {
+      divKeanu.classList.add('visible');
+    };
+
+
+
+    const anchors = document.querySelectorAll('a[href*="#"]')
+    for (let anchor of anchors) {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault()
+        
+        const blockID = anchor.getAttribute('href').substr(1)
+        
+        document.getElementById(blockID).scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      })
+    }
+
+
+  </script>
+</body>
+</html>
